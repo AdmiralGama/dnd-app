@@ -1,13 +1,18 @@
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [],
+  imports: [
+    RouterModule
+  ],
   template: `
-    <p>
-      header works!
-    </p>
+    <a [routerLink]="['/']">
+      <header class="brand-name">
+        <img class="brand-logo" src="/assets/logo.svg" alt="logo" aria-hidden="true">
+      </header>
+    </a>
   `,
   styleUrl: './header.component.css'
 })
