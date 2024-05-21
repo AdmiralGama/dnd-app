@@ -1,0 +1,16 @@
+{
+    "accounts": [
+        {
+            "id": 0,
+            "username": "testuser",
+            "password": "testpass",
+            "characters": [
+                {
+                    "id": 0,
+                    "name": "test character",
+                    "stats": [15, 14, 13, 12, 10, 8]
+                }
+            ]
+        }
+    ]
+}
