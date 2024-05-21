@@ -1,7 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import {Router} from "@angular/router"
 import { CookieService } from 'ngx-cookie-service';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { Account } from '../account';
+import { AccountService } from '../account.service';
 
 @Component({
   selector: 'app-login',
@@ -30,20 +33,35 @@ import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 })
 export class LoginComponent {
   cookie: CookieService;
+  router: Router;
 
   loginForm = new FormGroup({
     username: new FormControl(''),
     password: new FormControl('')
   });
 
-  constructor(cookie: CookieService) {
+  constructor(cookie: CookieService, router: Router) {
     this.cookie = cookie;
+    this.router = router;
   }
 
+  accountService: AccountService = inject(AccountService);
+
   login() {
-    if (this.loginForm.value.username !== undefined && this.loginForm.value.password !== undefined) {
-      this.cookie.set("username", this.loginForm.value.username!);
-      this.cookie.set("password", this.loginForm.value.password!);
+    let username = this.loginForm.value.username;
+    let password = this.loginForm.value.password;
+
+    if (username !== undefined && username !== null && password !== undefined && password !== null) {
+      (async () => {
+        let account : Account | undefined = await this.accountService.getAccountByLogin(username!, password!);
+        
+        if (account !== undefined) {
+          this.cookie.set("username", username!);
+          this.cookie.set("password", password!);
+
+          this.router.navigate(['/', account.id]);
+        }
+      })();
     }
   }
 }
