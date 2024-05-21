@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ActivatedRoute } from '@angular/router';
+import { RouterModule, ActivatedRoute } from '@angular/router';
 import { AccountService } from '../account.service';
 import { Account } from '../account';
 
@@ -8,13 +8,18 @@ import { Account } from '../account';
   selector: 'app-account',
   standalone: true,
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ],
   template: `
     <p>
       account works!
     </p>
-    <p *ngFor="let character of account?.characters">{{ character.name }}</p>
+    <section *ngFor="let character of account?.characters">
+      <a [routerLink]="['/', accountID, character.id]">
+        <p>{{ character.name }}</p>
+      </a>
+    </section>
     <p>{{ account?.id }}</p>
     <p>{{ account?.username }}</p>
     <p>{{ account?.password }}</p>

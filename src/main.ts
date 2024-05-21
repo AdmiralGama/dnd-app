@@ -6,12 +6,14 @@ import { bootstrapApplication,provideProtractorTestingSupport } from '@angular/p
 import { AppComponent } from './app/app.component';
 import { provideRouter } from '@angular/router';
 import routeConfig from './app/routes';
+import { CookieService } from 'ngx-cookie-service';
 
 bootstrapApplication(AppComponent,
   {
     providers: [
       provideProtractorTestingSupport(),
-      provideRouter(routeConfig)
+      provideRouter(routeConfig),
+      CookieService
     ]
   }
 ).catch(err => console.error(err));
