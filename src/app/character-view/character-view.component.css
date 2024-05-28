@@ -1,0 +1,11 @@
+.label-small {
+    font-size: 10px;
+    text-align: left;
+}
+
+.label-big {
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    overflow: hidden;
+}

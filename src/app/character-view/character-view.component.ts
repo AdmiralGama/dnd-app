@@ -51,29 +51,35 @@ import { Character } from '../character';
           <!--Stats-->
           <div class="row">
             <!--Base Stats-->
-            <div class="col" style="width: 40%;">
+            <div style="width: 40%; padding-left: 0%;">
               <div class="border border-dark" style="margin: 5%; width: 95%;">
-                <h3 style="text-align: center;">Str</h3>
+                <p class="label-big">STRENGTH</p>
+                <h3 style="text-align: center;">{{ character?.stats![0] }}</h3>
               </div>
               <div class="border border-dark" style="margin: 5%; width: 95%;">
-                <h3 style="text-align: center;">Dex</h3>
+                <p class="label-big">DEXTERITY</p>
+                <h3 style="text-align: center;">{{ character?.stats![1] }}</h3>
               </div>
               <div class="border border-dark" style="margin: 5%; width: 95%;">
-                <h3 style="text-align: center;">Con</h3>
+                <p class="label-big">CONSTITUTION</p>
+                <h3 style="text-align: center;">{{ character?.stats![2] }}</h3>
               </div>
               <div class="border border-dark" style="margin: 5%; width: 95%;">
-                <h3 style="text-align: center;">Int</h3>
+                <p class="label-big">INTELLIGENCE</p>
+                <h3 style="text-align: center;">{{ character?.stats![3] }}</h3>
               </div>
               <div class="border border-dark" style="margin: 5%; width: 95%;">
-                <h3 style="text-align: center;">Wis</h3>
+                <p class="label-big">WISDOM</p>
+                <h3 style="text-align: center;">{{ character?.stats![4] }}</h3>
               </div>
               <div class="border border-dark" style="margin: 5%; width: 95%;">
-                <h3 style="text-align: center;">Cha</h3>
+                <p class="label-big">CHARISMA</p>
+                <h3 style="text-align: center;">{{ character?.stats![5] }}</h3>
               </div>
             </div>
 
             <!--Proficiencies-->
-            <div class="border border-dark col" style="width: 60%;">
+            <div class="border border-dark" style="width: 60%; padding: 0%;">
               <div class="border border-dark">
                 <p style="text-align: center;">Proficiency Bonus</p>
               </div>
@@ -132,7 +138,6 @@ import { Character } from '../character';
         </div>
         <!--Right Column-->
         <div class="border border-dark col" style="padding: 2%;">
-          <p style="text-align: center;">Column</p>
           <div class="border border-dark">
             <p style="text-align: center;">Personality Traits</p>
           </div>
