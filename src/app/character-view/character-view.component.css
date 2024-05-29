@@ -1,11 +1,27 @@
-.label-small {
-    font-size: 10px;
-    text-align: left;
+h3 {
+    text-align: center;
 }
 
-.label-big {
-    font-size: 12px;
-    font-weight: bold;
+.center {
     text-align: center;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.label {
+    font-size: 12px;
     overflow: hidden;
+    margin-bottom: 0px;
+}
+
+.label-large {
+    font-size: 14px;
+    overflow: hidden;
+}
+
+.stat-box {
+    margin: 5%;
+    width: 95%;
 }

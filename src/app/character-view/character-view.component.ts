@@ -24,22 +24,29 @@ import { Character } from '../character';
       <div class="border border-dark row">
         <!--Name-->
         <div style="width: 40%">
-          <h3 style="text-align: center;">Character Name</h3>
+          <h3>{{ character?.name }}</h3>
+          <p class="label-large">Character Name</p>
         </div>
         <!--Info-->
         <div style="width: 60%;">
           <div class="row">
             <div class="col">
-              <p style="text-align: center;">Class & Level</p>
-              <p style="text-align: center;">Race</p>
+              <h4>Class & Level</h4>
+              <p class="label-large">Class & Level</p>
+              <h4>Race</h4>
+              <p class="label-large">Race</p>
             </div>
             <div class="col">
-              <p style="text-align: center;">Background</p>
-              <p style="text-align: center;">Alignment</p>
+              <h4>Background</h4>
+              <p class="label-large">Background</p>
+              <h4>Alignment</h4>
+              <p class="label-large">Alignment</p>
             </div>
             <div class="col">
-              <p style="text-align: center;">Player Name</p>
-              <p style="text-align: center;">Experience</p>
+              <h4>Player Name</h4>
+              <p class="label-large">Player Name</p>
+              <h4>Experience</h4>
+              <p class="label-large">Experience</p>
             </div>
           </div>
         </div>
@@ -52,106 +59,123 @@ import { Character } from '../character';
           <div class="row">
             <!--Base Stats-->
             <div style="width: 40%; padding-left: 0%;">
-              <div class="border border-dark" style="margin: 5%; width: 95%;">
-                <p class="label-big">STRENGTH</p>
-                <h3 style="text-align: center;">{{ character?.stats![0] }}</h3>
+              <div class="stat-box border border-dark">
+                <p class="label bold center">STRENGTH</p>
+                <h3>{{ character?.stats![0] }}</h3>
               </div>
-              <div class="border border-dark" style="margin: 5%; width: 95%;">
-                <p class="label-big">DEXTERITY</p>
-                <h3 style="text-align: center;">{{ character?.stats![1] }}</h3>
+              <div class="stat-box border border-dark">
+                <p class="label bold center">DEXTERITY</p>
+                <h3>{{ character?.stats![1] }}</h3>
               </div>
-              <div class="border border-dark" style="margin: 5%; width: 95%;">
-                <p class="label-big">CONSTITUTION</p>
-                <h3 style="text-align: center;">{{ character?.stats![2] }}</h3>
+              <div class="stat-box border border-dark">
+                <p class="label bold center">CONSTITUTION</p>
+                <h3>{{ character?.stats![2] }}</h3>
               </div>
-              <div class="border border-dark" style="margin: 5%; width: 95%;">
-                <p class="label-big">INTELLIGENCE</p>
-                <h3 style="text-align: center;">{{ character?.stats![3] }}</h3>
+              <div class="stat-box border border-dark">
+                <p class="label bold center">INTELLIGENCE</p>
+                <h3>{{ character?.stats![3] }}</h3>
               </div>
-              <div class="border border-dark" style="margin: 5%; width: 95%;">
-                <p class="label-big">WISDOM</p>
-                <h3 style="text-align: center;">{{ character?.stats![4] }}</h3>
+              <div class="stat-box border border-dark">
+                <p class="label bold center">WISDOM</p>
+                <h3>{{ character?.stats![4] }}</h3>
               </div>
-              <div class="border border-dark" style="margin: 5%; width: 95%;">
-                <p class="label-big">CHARISMA</p>
-                <h3 style="text-align: center;">{{ character?.stats![5] }}</h3>
+              <div class="stat-box border border-dark">
+                <p class="label bold center">CHARISMA</p>
+                <h3>{{ character?.stats![5] }}</h3>
               </div>
             </div>
 
             <!--Proficiencies-->
             <div class="border border-dark" style="width: 60%; padding: 0%;">
               <div class="border border-dark">
-                <p style="text-align: center;">Proficiency Bonus</p>
+                <p class="label bold center">Proficiency Bonus</p>
               </div>
               <div class="border border-dark">
-                <p style="text-align: center;">Saving Throws</p>
+                <p class="center">Saving Throws</p>
+                <p class="label bold center">SAVING THROWS</p>
               </div>
               <div class="border border-dark">
-                <p style="text-align: center;">Skills</p>
+                <p class="center">Skills</p>
+                <p class="label bold center">SKILLS</p>
               </div>
             </div>
           </div>
 
           <div class="border border-dark">
-            <p style="text-align: center;">Passive Wisdom</p>
+            <p class="label center">Passive Wisdom</p>
           </div>
           <div class="border border-dark">
-            <p style="text-align: center;">Other Proficiencies & Languages</p>
+            <p class="center">Other Proficiencies & Languages</p>
+            <p class="label bold center">OTHER PROFICIENCIES & LANGUAGES</p>
           </div>
         </div>
         <!--Middle Column-->
         <div class="border border-dark col" style="padding: 2%;">
           <div class="row">
             <div class="border border-dark col">
-              <p style="text-align: center;">Armor Class</p>
+              <p class="center">Armor Class</p>
+              <p class="label bold center">ARMOR CLASS</p>
             </div>
             <div class="border border-dark col">
-              <p style="text-align: center;">Initiative</p>
+              <p class="center">Initiative</p>
+              <p class="label bold center">INITIATIVE</p>
             </div>
             <div class="border border-dark col">
-              <p style="text-align: center;">Speed</p>
+              <p class="center">Speed</p>
+              <p class="label bold center">SPEED</p>
             </div>
           </div>
 
           <div class="border border-dark">
-            <p style="text-align: center;">Current HP</p>
+            <p class="center">Current HP</p>
+            <p class="label bold center">CURRENT HP</p>
           </div>
           <div class="border border-dark">
-            <p style="text-align: center;">Temp HP</p>
+            <p class="center">Temp HP</p>
+            <p class="label bold center">TEMP HP</p>
           </div>
 
           <div class="row">
             <div class="border border-dark col">
-              <p style="text-align: center;">Hit Dice</p>
+              <p class="center">Hit Dice</p>
+              <p class="label center">HIT DICE</p>
             </div>
             <div class="border border-dark col">
-            <p style="text-align: center;">Death Saves</p>
+              <p class="center">Death Saves</p>
+              <p class="label center">DEATH SAVES</p>  
             </div>
           </div>
 
           <div class="border border-dark">
-            <p style="text-align: center;">Attacks & Spellcasting</p>
+            <p class="center">Attacks & Spellcasting</p>
+            <p class="label bold center">ATTACKS & SPELLCASTING</p>
           </div>
           <div class="border border-dark">
-            <p style="text-align: center;">Equipment</p>
+            <p class="center">Equipment</p>
+            <p class="label bold center">EQUIPMENT</p>
           </div>
         </div>
         <!--Right Column-->
         <div class="border border-dark col" style="padding: 2%;">
           <div class="border border-dark">
-            <p style="text-align: center;">Personality Traits</p>
+            <p class="center">Personality Traits</p>
+            <p class="label center">PERSONALITY TRAITS</p>
           </div>
           <div class="border border-dark">
-            <p style="text-align: center;">Ideals</p>
+            <p class="center">Ideals</p>
+            <p class="label center">IDEALS</p>
           </div>
           <div class="border border-dark">
-            <p style="text-align: center;">Bonds</p>
+            <p class="center">Bonds</p>
+            <p class="label center">BONDS</p>
           </div>
           <div class="border border-dark">
-            <p style="text-align: center;">Flaws</p>
+            <p class="center">Flaws</p>
+            <p class="label center">FLAWS</p>
           </div>
           <div class="border border-dark">
-            <p style="text-align: center;">Features & Traits</p>
+            <p class="center">Features & Traits</p>
+            <p class="label bold center">FEATURES & TRAITS</p>
           </div>
         </div>
       </div>
